@@ -1,0 +1,1 @@
+# HubSpot property models — placeholder

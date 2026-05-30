@@ -1,0 +1,88 @@
+.page { min-height: 100vh; background: var(--cream); }
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 64px;
+  background: rgba(250,248,243,0.9); border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 10;
+}
+.back { font-size: 13px; color: var(--muted); font-weight: 500; transition: color 0.15s; }
+.back:hover { color: var(--text); }
+.logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: var(--text); }
+
+.main { max-width: 680px; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; gap: 24px; }
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 800; letter-spacing: -1px; color: var(--text);
+}
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.cardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.cardTitle { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.cardDesc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.connectedBadge {
+  font-size: 12px; font-weight: 700; color: #15803D;
+  background: #DCFCE7; border: 1px solid #BBF7D0;
+  padding: 4px 12px; border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+}
+
+/* Connected state */
+.connected { display: flex; flex-direction: column; gap: 16px; }
+.portalInfo {}
+.portalName { font-size: 16px; font-weight: 700; color: var(--text); }
+.tokenPreview { font-size: 13px; color: var(--muted); font-family: monospace; margin-top: 2px; }
+.connectedNote {
+  font-size: 13px; color: #15803D; background: #F0FDF4;
+  border: 1px solid #BBF7D0; border-radius: 8px; padding: 12px 16px;
+}
+.btnDanger {
+  align-self: flex-start; background: #FEF2F2; color: #B91C1C;
+  border: 1px solid #FECACA; padding: 9px 18px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; transition: background 0.15s;
+}
+.btnDanger:hover:not(:disabled) { background: #FEE2E2; }
+.btnDanger:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Connect form */
+.connectForm { display: flex; flex-direction: column; gap: 20px; }
+.steps { display: flex; flex-direction: column; gap: 10px; background: var(--cream); border-radius: 10px; padding: 16px; }
+.step { font-size: 14px; color: var(--text2); line-height: 1.6; }
+.step code {
+  font-family: monospace; font-size: 12px; background: var(--cream2);
+  padding: 2px 6px; border-radius: 4px; color: var(--accent);
+}
+.inputRow { display: flex; gap: 10px; }
+.input {
+  flex: 1; padding: 11px 14px; border: 1.5px solid var(--border);
+  border-radius: 10px; font-size: 14px; font-family: monospace;
+  outline: none; transition: border-color 0.15s; background: var(--cream);
+  color: var(--text);
+}
+.input:focus { border-color: var(--accent); background: var(--surface); }
+.input::placeholder { color: var(--muted); font-family: 'Inter', sans-serif; }
+.btnPrimary {
+  background: var(--text); color: var(--cream); padding: 11px 22px;
+  border-radius: 10px; font-size: 14px; font-weight: 600; white-space: nowrap;
+  transition: background 0.15s;
+}
+.btnPrimary:hover:not(:disabled) { background: var(--text2); }
+.btnPrimary:disabled { opacity: 0.5; cursor: not-allowed; }
+.error { color: #B91C1C; font-size: 13px; }
+
+/* Property list */
+.propList { display: flex; flex-direction: column; gap: 1px; margin-top: 16px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.propRow {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.propRow:last-child { border-bottom: none; }
+.propLabel { font-size: 14px; font-weight: 600; color: var(--text); }
+.propName { font-size: 12px; color: var(--muted); font-family: monospace; margin-top: 2px; }
+.propType {
+  font-size: 11px; color: var(--muted); background: var(--cream2);
+  padding: 3px 10px; border-radius: 100px; border: 1px solid var(--border);
+}
